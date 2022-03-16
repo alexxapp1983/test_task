@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "4787b134-76a9-4394-9bf4-44d02f8d85cf",
+		"name": "test_task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "weather_in_Moscow",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Gismeteo-Token",
+						"value": "56b30cb255.3443075",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://api.gismeteo.net/v2/weather/current/4368/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gismeteo",
+						"net"
+					],
+					"path": [
+						"v2",
+						"weather",
+						"current",
+						"4368",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "response_404",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Gismeteo-Token",
+						"value": "56b30cb255.3443075",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://api.gismeteo.net/v2/weather/curr/4368/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gismeteo",
+						"net"
+					],
+					"path": [
+						"v2",
+						"weather",
+						"curr",
+						"4368",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "response_401",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Gismeteo-Token",
+						"value": "56b30cb255.3443075",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://api.gismeteo.net/v2/weather/current/4368/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gismeteo",
+						"net"
+					],
+					"path": [
+						"v2",
+						"weather",
+						"current",
+						"4368",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "response_200",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Gismeteo-Token",
+						"value": "56b30cb255.3443075",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://api.gismeteo.net/v2/weather/current/9999999999999999/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gismeteo",
+						"net"
+					],
+					"path": [
+						"v2",
+						"weather",
+						"current",
+						"9999999999999999",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400_with_days_not_between_3,10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.gismeteo.net/v2/weather/current/4368/?days=2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gismeteo",
+						"net"
+					],
+					"path": [
+						"v2",
+						"weather",
+						"current",
+						"4368",
+						""
+					],
+					"query": [
+						{
+							"key": "days",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400_with_latitude_and_longitude_not_in_range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.gismeteo.net/v2/weather/current/?latitude=91&longitude=181",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gismeteo",
+						"net"
+					],
+					"path": [
+						"v2",
+						"weather",
+						"current",
+						""
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "91"
+						},
+						{
+							"key": "longitude",
+							"value": "181"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
