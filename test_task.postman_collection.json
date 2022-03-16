@@ -129,7 +129,13 @@
 			"name": "400_with_days_not_between_3,10",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "X-Gismeteo-Token",
+						"value": "56b30cb255.3443075",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "https://api.gismeteo.net/v2/weather/current/4368/?days=2",
 					"protocol": "https",
@@ -159,7 +165,13 @@
 			"name": "400_with_latitude_and_longitude_not_in_range",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "X-Gismeteo-Token",
+						"value": "56b30cb255.3443075",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "https://api.gismeteo.net/v2/weather/current/?latitude=91&longitude=181",
 					"protocol": "https",
